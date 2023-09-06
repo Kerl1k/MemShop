@@ -1,0 +1,25 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "banana",
+      "img": "https://chpic.su/_data/stickers/k/kisanopisaa/kisanopisaa_049.webp",
+      "price": "123р",
+      "about": "banana mmm monks"
+    },
+    {
+      "id": 2,
+      "name": "apple",
+      "img": "https://sun9-77.userapi.com/impg/89qmbkrMet3nuNSdSJF-dtz_WZNl8RwWYI_qow/_Tnz5KzP170.jpg?size=604x539&quality=95&sign=7df89e41921c1b266d9bd32e01e2bff3&type=album",
+      "price": "321р",
+      "about": "hey apple"
+    },
+    {
+      "id": 3,
+      "name": "kiwi",
+      "img": "https://sun9-21.userapi.com/impg/xMZU1KUGd_jYNueY_4z1DV3oESUgOHrI7ulg1w/i36PSU9FVxs.jpg?size=1996x2003&quality=95&sign=f2e37b69dd89c9eeab26744b75e11a65&type=album",
+      "price": "42р",
+      "about": "money"
+    }
+  ]
+}

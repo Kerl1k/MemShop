@@ -6,38 +6,21 @@ interface IProduct {
     about: string;
 }
 
-const defaultState: IProduct[] = [{
-    id: 1,
-    name: "banana",
-    img: "url",
-    price: "123р",
-    about: "banana mmm monks"
-},
-    {
-        id: 2,
-        name: "apple",
-        img: "url",
-        price: "321р",
-        about: "hey apple"
-    },
-    {
-        id: 3,
-        name: "kiwi",
-        img: "url",
-        price: "42р",
-        about: "money"
-    }]
+const defaultState: any = []
 
-const ADD_PRODUCT = "ADD_PRODUCT"
-const GET_PRODUCT = "GET_PRODUCT"
+type ActionType = "ADD_PRODUCT" | "GET_PRODUCT" | "ADD_MANY_PRODUCT"
 
-export const ProductReducer =( (state = defaultState, action: any)=> {
+export const ProductReducer =( (state = defaultState, action: {type:ActionType, payload: any}):any=> {
     switch (action.type){
-        case ADD_PRODUCT:
+        case "ADD_MANY_PRODUCT":
+            return [...action.payload]
+        case "ADD_PRODUCT":
             return {...state,}
-        case GET_PRODUCT:
+        case "GET_PRODUCT":
             return {...state,}
         default:
             return state
     }
 })
+
+export const addManyAction = (payload: any) => ({type: "ADD_MANY_PRODUCT", payload})

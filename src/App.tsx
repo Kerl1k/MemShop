@@ -1,18 +1,22 @@
 import './CSS/App.css';
 import Header from './components/Header'
-import React from "react";
+import React, {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {addCartAction} from "./reducer/cartReducer";
 import {useTypedSelector} from "./hook/useTypedSelector";
+import {fetchProduct} from "./reducer/customer";
+
 function App() {
-
     const dispatch = useDispatch()
-    const cart = useTypedSelector(state =>  state.cart)
     const product = useTypedSelector(state => state.info)
-
-    const addCart = (id:number) => {
-        const qwe:any = {
-            id: id,
+    useEffect(() => {dispatch(fetchProduct())}, [])
+    const addCart = (p: any) => {
+        const qwe: any = {
+            id: p.id,
+            name: p.name,
+            img: p.img,
+            price: p.price,
+            about: p.about,
             count: 1,
         }
         dispatch(addCartAction(qwe))
@@ -24,12 +28,12 @@ function App() {
             <h1>Shop</h1>
             <div className="list">
                 {product.length > 0 ?
-                    product.map( (p)=>
+                    product.map((p: any) =>
                         <div key={p.id} className="product">
-                            <div className="product_img">{p.img}</div>
+                            <img src={p.img} className="product_img"/>
                             <div className="product_price">{p.price}</div>
                             <div className="product_name">{p.name}</div>
-                            <button onClick={() => addCart(p.id)}
+                            <button onClick={() => addCart(p)}
                                     className="product_button">В корзину
                             </button>
                         </div>)
