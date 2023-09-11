@@ -43,17 +43,21 @@
       "about": "i have pineapple"
     }
   ],
-  "cart": {},
+  "cart": {
+    "4": {
+      "id": 4,
+      "name": "marakua",
+      "img": "https://sun9-62.userapi.com/impg/k8Y9wIjPfu9dDLTh-ExWO3VWFI7z6rlIIeIruA/-OiIneqRfmI.jpg?size=600x600&quality=96&sign=10f44ed62f6e9da726784098e02a3ad5&type=album",
+      "price": 300,
+      "about": "exotic fruit special for Nix",
+      "count": 1
+    }
+  },
   "users": {
-    "id": 262346,
-    "name": "Oleg",
-    "password": "32123",
-    "cart": {
-      "id": 6,
-      "name": "pineapple",
-      "img": "https://www.meme-arsenal.com/memes/5591f36e09159e8612ce69658b3fb37c.jpg",
-      "price": 400,
-      "about": "i have pineapple"
+    "14234": {
+      "id": 1694470985310,
+      "login": "14234",
+      "password": "124"
     }
   }
 }

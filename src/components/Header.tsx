@@ -9,14 +9,29 @@ const Header = () => {
     cart.forEach((p) =>{
         sum = sum + p.count
     })
+    function exit() {
+        localStorage.setItem("login", "exit")
+        localStorage.setItem("id", "")
+    }
     return (
         <header>
-            <div className="header">
-                <div className="header_button_list">
-                    <Link className="header_button" to="/">На главную</Link>
-                    <Link className="header_button" to="/Cart">Корзина {sum}</Link>
+            {localStorage.getItem("login") === "login" ?
+                <div className="header">
+                    <div className="header_button_list">
+                        <Link className="header_button" to="/">На главную</Link>
+                        <Link className="header_button" to="/Cart">Корзина {sum}</Link>
+                        <Link onClick={exit} className="header_button" to="/">Выйти</Link>
+                    </div>
                 </div>
-            </div>
+                :
+                <div className="header">
+                    <div className="header_button_list">
+                        <Link className="header_button" to="/">На главную</Link>
+                        <Link className="header_button" to="/Registration">Регистрация</Link>
+                        <Link className="header_button" to="/Login">Авторизация</Link>
+                    </div>
+                </div>
+            }
         </header>
     );
 };
