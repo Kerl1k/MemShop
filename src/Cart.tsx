@@ -1,62 +1,57 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Header from './components/Header'
 import "./CSS/Cart.css"
 import {useTypedSelector} from "./hook/useTypedSelector";
-import {getCartAction, addCartAction} from "./reducer/cartReducer";
-import {useDispatch} from "react-redux";
+import {addCart, deleteCart} from "./reducer/Cart/cartThunk";
+import {useTypedDispatch} from "./hook/useTypedDispatch";
+import {ICart} from "./typeScript/typescript";
+import {fetchCart} from "./reducer/Cart/fetchCart";
 
 const Cart = () => {
-        const cart = useTypedSelector(state => state.cart)
-        const cartArray = Object.values(cart)
-        const dispatch = useDispatch()
-        const getCart = (p: any) => {
-            const qwe: any = {
-                id: p.id,
-                name: p.name,
-                img: p.img,
-                price: p.price,
-                about: p.about,
-                count: p.count,
-            }
-            dispatch(getCartAction(qwe))
+        const cart = useTypedSelector(state => Object.values(state.cart))
+        const dispatch = useTypedDispatch()
+        useEffect(() => {dispatch(fetchCart())}, [addCart, deleteCart])
+        let sum: number = 0;
+
+        async function q(p: ICart) {
+            // @ts-ignore
+            await dispatch(deleteCart(p))
         }
-    const addCart = (p: any) => {
-        const qwe: any = {
-            id: p.id,
-            name: p.name,
-            img: p.img,
-            price: p.price,
-            about: p.about,
-            count: p.count,
+
+        async function w(p: ICart) {
+            // @ts-ignore
+            await dispatch(addCart(p))
         }
-        dispatch(addCartAction(qwe))
-    }
+
         return (
             <div>
                 <Header/>
                 <h1>CART</h1>
                 <div className="cart_list">
                     {
-                        cartArray.length === 0 ?
+                        cart.length === 0 ?
                             <h1>НИХУЯ НЕТ</h1>
                             :
-                            cartArray.map(p => {
+                            cart.map(p => {
+                                sum = p.price * p.count + sum;
+
                                 return (
-                                    <div className="cart_product">
-                                        <img src={p.img} className="product_img"/>
+                                    <div key={p.id} className="cart_product">
+                                        <img src={p.img} className="cart_img"/>
                                         <div className="product_name">{p.name}</div>
                                         <div className="product_right">
-                                            <div className="product_price">{p.price}</div>
+                                            <div className="product_price">{p.price}p</div>
                                             <div className="product_count">
-                                                <button className="button_count" onClick={()=>getCart(p)}>-</button>
+                                                <button className="button_count" onClick={() => q(p)}>-</button>
                                                 <div className="product_count_number">{p.count}</div>
-                                                <button className="button_count" onClick={()=>addCart(p)}>+</button>
+                                                <button className="button_count" onClick={() => w(p)}>+</button>
                                             </div>
                                         </div>
                                     </div>
                                 )
                             })
                     }
+                    {sum}
                 </div>
             </div>
         );

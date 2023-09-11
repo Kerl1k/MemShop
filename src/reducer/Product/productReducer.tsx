@@ -1,19 +1,14 @@
-interface IProduct {
-    id:number;
-    name: string;
-    img:string;
-    price:string;
-    about: string;
-}
+import {ICart} from "../../typeScript/typescript";
 
-const defaultState: any = []
+const defaultState: ProductState = {}
+type ProductState = Record<number, ICart>
 
 type ActionType = "ADD_PRODUCT" | "GET_PRODUCT" | "ADD_MANY_PRODUCT"
 
-export const ProductReducer =( (state = defaultState, action: {type:ActionType, payload: any}):any=> {
+export const ProductReducer =( (state: ProductState = defaultState, action: {type:ActionType, payload: any}):ProductState=> {
     switch (action.type){
         case "ADD_MANY_PRODUCT":
-            return [...action.payload]
+            return {...action.payload}
         case "ADD_PRODUCT":
             return {...state,}
         case "GET_PRODUCT":
