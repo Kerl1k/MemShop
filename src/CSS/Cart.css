@@ -11,10 +11,11 @@
     margin: 1% 0;
 }
 
-.product_img{
+.cart_img{
+    margin: 0;
     border: 1px solid black;
     width: 250px;
-    height: 95%;
+    height: 100%;
 }
 
 .product_name{

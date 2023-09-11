@@ -4,22 +4,56 @@
       "id": 1,
       "name": "banana",
       "img": "https://chpic.su/_data/stickers/k/kisanopisaa/kisanopisaa_049.webp",
-      "price": "123р",
+      "price": 123,
       "about": "banana mmm monks"
     },
     {
       "id": 2,
       "name": "apple",
       "img": "https://sun9-77.userapi.com/impg/89qmbkrMet3nuNSdSJF-dtz_WZNl8RwWYI_qow/_Tnz5KzP170.jpg?size=604x539&quality=95&sign=7df89e41921c1b266d9bd32e01e2bff3&type=album",
-      "price": "321р",
+      "price": 321,
       "about": "hey apple"
     },
     {
       "id": 3,
       "name": "kiwi",
       "img": "https://sun9-21.userapi.com/impg/xMZU1KUGd_jYNueY_4z1DV3oESUgOHrI7ulg1w/i36PSU9FVxs.jpg?size=1996x2003&quality=95&sign=f2e37b69dd89c9eeab26744b75e11a65&type=album",
-      "price": "42р",
+      "price": 42,
       "about": "money"
+    },
+    {
+      "id": 4,
+      "name": "marakua",
+      "img": "https://sun9-62.userapi.com/impg/k8Y9wIjPfu9dDLTh-ExWO3VWFI7z6rlIIeIruA/-OiIneqRfmI.jpg?size=600x600&quality=96&sign=10f44ed62f6e9da726784098e02a3ad5&type=album",
+      "price": 300,
+      "about": "exotic fruit special for Nix"
+    },
+    {
+      "id": 5,
+      "name": "cocaine",
+      "img": "https://sun9-12.userapi.com/impg/rB5QcjscNUPr3pf9DlhWIJ2ggbqiqmvE1JdzIQ/vpAGxgtwZ_0.jpg?size=747x511&quality=95&sign=725fde1a0d33ac42ae4f53e9304dba57&type=album",
+      "price": 10000,
+      "about": "dolbit norm"
+    },
+    {
+      "id": 6,
+      "name": "pineapple",
+      "img": "https://www.meme-arsenal.com/memes/5591f36e09159e8612ce69658b3fb37c.jpg",
+      "price": 400,
+      "about": "i have pineapple"
     }
-  ]
+  ],
+  "cart": {},
+  "users": {
+    "id": 262346,
+    "name": "Oleg",
+    "password": "32123",
+    "cart": {
+      "id": 6,
+      "name": "pineapple",
+      "img": "https://www.meme-arsenal.com/memes/5591f36e09159e8612ce69658b3fb37c.jpg",
+      "price": 400,
+      "about": "i have pineapple"
+    }
+  }
 }
