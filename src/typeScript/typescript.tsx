@@ -11,7 +11,7 @@ export interface ICart extends IProduct{
     count: number;
 }
 
-export interface IUsers extends ICart{
+export interface IUsers{
     id: number;
     login: string;
     password: string;

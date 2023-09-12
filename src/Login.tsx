@@ -1,32 +1,24 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Header from "./components/Header";
-import {Link} from "react-router-dom";
 import {useTypedDispatch} from "./hook/useTypedDispatch";
-import {fetchUsers} from "./reducer/Users/fetchUsers";
-import {useTypedSelector} from "./hook/useTypedSelector";
+import {login} from "./reducer/login/loginThunk";
 
 const Login = () => {
     const dispatch = useTypedDispatch()
-    const [login, setLogin] = useState<any>('')
+    const [name, setName] = useState<any>('')
     const [password, setPassword] = useState<any>('')
-    useEffect(() => {dispatch(fetchUsers())}, [])
-    const users = useTypedSelector(state => state.users)
+
     async function addUser(e: any) {
         e.preventDefault()
-        if(users[login].login === login && users[login].password === password){
-            localStorage.setItem("login", "login")
-            localStorage.setItem("id", String(users[login].id))
-            return(<Link to="/"/>)
-        }else{
-            console.log("XUI")
-        }
+        // @ts-ignore
+        const log = await dispatch(login(name, password))
     }
     return (
         <div>
             <Header/>
             <form className="login">
-                <input onChange={e => setLogin(e.target.value)}
-                       value={login}
+                <input onChange={e => setName(e.target.value)}
+                       value={name}
                        className="input"
                        placeholder="Введите логин"
                        type={"text"}/>

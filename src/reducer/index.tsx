@@ -4,11 +4,13 @@ import {ProductReducer} from "./Product/productReducer";
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from "redux-thunk";
 import {UsersReducer} from "./Users/usersReducer";
+import {loginReducer} from "./login/loginReducer";
 
 const rootReducer = combineReducers({
     info: ProductReducer,
     cart: CartReducer,
     users: UsersReducer,
+    login: loginReducer,
 })
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))

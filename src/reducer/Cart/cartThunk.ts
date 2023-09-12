@@ -1,8 +1,9 @@
 import {ICart} from "../../typeScript/typescript";
 import {addCartAction, addManyCartAction, getCartAction} from "./cartReducer";
+import {AppDispatch} from "../index";
 const url = "http://localhost:3001/cart"
  export const addManyCart = (item: any) => {
-    return async function (dispatch: any, getState: any) {
+    return async function (dispatch: AppDispatch, getState: any) {
         let newCart: any
         item.forEach((e: ICart) => {
             newCart = {...newCart, [e.id]: {...e}}
@@ -13,7 +14,7 @@ const url = "http://localhost:3001/cart"
 }
 
 export const addCart = (item: any) => {
-    return async function (dispatch: any, getState: any) {
+    return async function (dispatch: AppDispatch, getState: any) {
         const state = getState()
         let newCart
         if (state.cart[item.id]) {
@@ -27,7 +28,7 @@ export const addCart = (item: any) => {
 }
 
 export const deleteCart = (item: ICart) => {
-    return async function (dispatch: any, getState: any) {
+    return async function (dispatch: AppDispatch, getState: any) {
         const state = getState()
         let newCart
         if (state.cart[item.id].count === 1){

@@ -44,20 +44,20 @@
     }
   ],
   "cart": {
-    "4": {
-      "id": 4,
-      "name": "marakua",
-      "img": "https://sun9-62.userapi.com/impg/k8Y9wIjPfu9dDLTh-ExWO3VWFI7z6rlIIeIruA/-OiIneqRfmI.jpg?size=600x600&quality=96&sign=10f44ed62f6e9da726784098e02a3ad5&type=album",
-      "price": 300,
-      "about": "exotic fruit special for Nix",
+    "1": {
+      "id": 1,
+      "name": "banana",
+      "img": "https://chpic.su/_data/stickers/k/kisanopisaa/kisanopisaa_049.webp",
+      "price": 123,
+      "about": "banana mmm monks",
       "count": 1
     }
   },
-  "users": {
-    "14234": {
+  "users": [
+    {
       "id": 1694470985310,
-      "login": "14234",
-      "password": "124"
+      "login": "admin",
+      "password": "1"
     }
-  }
+  ]
 }

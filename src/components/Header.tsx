@@ -5,17 +5,17 @@ import {useTypedSelector} from "../hook/useTypedSelector";
 
 const Header = () => {
     const cart = useTypedSelector(state => Object.values(state.cart))
+    const login = useTypedSelector(state =>  state.login.isLoggedIn)
     let sum = 0
     cart.forEach((p) =>{
         sum = sum + p.count
     })
     function exit() {
-        localStorage.setItem("login", "exit")
-        localStorage.setItem("id", "")
+
     }
     return (
         <header>
-            {localStorage.getItem("login") === "login" ?
+            {login ?
                 <div className="header">
                     <div className="header_button_list">
                         <Link className="header_button" to="/">На главную</Link>

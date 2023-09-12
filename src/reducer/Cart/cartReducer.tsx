@@ -17,6 +17,6 @@ export const CartReducer = ((state: CartState = defaultState, action: {type:Acti
     }
 })
 
-export const addManyCartAction = (payload: ICart) => ({type: "ADD_MANY_CART", payload})
-export const addCartAction = (payload: ICart | undefined) => ({type: "ADD_CART", payload})
-export const getCartAction = (payload: ICart) => ({type: "GET_CART", payload})
+export const addManyCartAction = (payload: ICart):{type: ActionType, payload: any} => ({type: "ADD_MANY_CART", payload})
+export const addCartAction = (payload: ICart | undefined):{type: ActionType, payload: any} => ({type: "ADD_CART", payload})
+export const getCartAction = (payload: ICart):{type: ActionType, payload: any} => ({type: "GET_CART", payload})
