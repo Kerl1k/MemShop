@@ -28,5 +28,7 @@
 }
 .product_name{
   width: 90%;
-
+}
+.button_change{
+  position:absolute;
 }

@@ -5,7 +5,7 @@ import App from './App';
 import Cart from './Cart'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Provider} from "react-redux";
-import {store} from "./reducer/index";
+import {store} from "./reducer";
 import Registration from "./Registration";
 import Login from "./Login";
 const root = ReactDOM.createRoot(
