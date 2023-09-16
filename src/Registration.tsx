@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import Header from "./components/Header";
 import "../src/CSS/Registration.css"
-import {addUsers} from "./reducer/Users/usersThunk";
-import {fetchUsers} from "./reducer/Users/fetchUsers";
+import {addUsers} from "./reducer/Registration/usersThunk";
+import {fetchUsers} from "./reducer/Registration/fetchUsers";
 import {useTypedDispatch} from "./hook/useTypedDispatch";
 import {Link} from "react-router-dom";
 const Registration = () => {
@@ -13,12 +13,9 @@ const Registration = () => {
 
     async function addUser(e: any) {
         e.preventDefault()
-            const user = {id:Date.now(), login: login, password: password}
-            localStorage.setItem("login", "login")
-            localStorage.setItem("id", String(user.id))
-
+            const user = {id:Date.now(), login: login, password: password, type: "user"}
         // @ts-ignore
-      await dispatch(addUsers(users))
+      await dispatch(addUsers( user))
     }
     return (
         <div>

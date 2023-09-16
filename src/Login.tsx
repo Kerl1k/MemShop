@@ -11,7 +11,7 @@ const Login = () => {
     async function addUser(e: any) {
         e.preventDefault()
         // @ts-ignore
-        const log = await dispatch(login(name, password))
+        await dispatch(login(name, password))
     }
     return (
         <div>

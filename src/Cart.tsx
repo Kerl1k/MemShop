@@ -10,7 +10,7 @@ import {fetchCart} from "./reducer/Cart/fetchCart";
 const Cart = () => {
         const cart = useTypedSelector(state => Object.values(state.cart))
         const dispatch = useTypedDispatch()
-        useEffect(() => {dispatch(fetchCart())}, [addCart, deleteCart])
+        useEffect(() => {dispatch(fetchCart())}, [])
         let sum: number = 0;
 
         async function q(p: ICart) {
@@ -34,10 +34,9 @@ const Cart = () => {
                             :
                             cart.map(p => {
                                 sum = p.price * p.count + sum;
-
                                 return (
                                     <div key={p.id} className="cart_product">
-                                        <img src={p.img} className="cart_img"/>
+                                        <img alt={p.name} src={p.img} className="cart_img"/>
                                         <div className="product_name">{p.name}</div>
                                         <div className="product_right">
                                             <div className="product_price">{p.price}p</div>
