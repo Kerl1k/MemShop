@@ -12,13 +12,14 @@ export const ProductReducer =( (state: ProductState = defaultState, action: {typ
         case "ADD_PRODUCT":
             return {...action.payload}
         case "CHANGE_PRODUCT":
-            return {...action.payload}
+            return {...state, [action.payload.id]:{...action.payload}};
         case "GET_PRODUCT":
-            return [state]
+            return {...action.payload}
         default:
-            return [state]
+            return {...state}
     }
 })
 
 export const addManyAction = (payload: any) => ({type: "ADD_MANY_PRODUCT", payload})
 export const changeAction = (payload: any) => ({type: "CHANGE_PRODUCT", payload})
+export const deleteAction = (payload: any) => ({type: "GET_PRODUCT", payload})

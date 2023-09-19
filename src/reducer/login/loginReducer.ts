@@ -1,3 +1,5 @@
+import { IUsers } from "../../typeScript/typescript"
+
 interface LoginState {isLoggedIn: boolean}
 
 const defaultState: LoginState = {isLoggedIn: false}
@@ -5,7 +7,7 @@ type ActionType = "LOGIN" | "LOGOUT"
 export const loginReducer = ((state: LoginState = defaultState, action: {type:ActionType, payload?:any}):LoginState => {
     switch (action.type) {
         case "LOGIN":
-            return {isLoggedIn: true}
+            return {...action.payload, isLoggedIn: true}
         case "LOGOUT":
             return {isLoggedIn: false}
         default:
@@ -13,6 +15,6 @@ export const loginReducer = ((state: LoginState = defaultState, action: {type:Ac
     }
 })
 
-export const loginAction = ():{type: ActionType} => ({type: "LOGIN"})
+export const loginAction = (payload: IUsers[]):{type: ActionType, payload: any} => ({type: "LOGIN", payload})
 export const logoutAction = ():{type: ActionType} => ({type: "LOGOUT"})
 

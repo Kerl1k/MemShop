@@ -9,8 +9,8 @@ export const login = (login: string, password: string) => {
         const response = await fetch(url+`?login=${login}&password=${password}`, {method: "GET", headers: {'Content-Type': 'application/json;charset=utf-8'}})
         const data: IUsers[] = await response.json()
         if(data.length === 1){
-            // @ts-ignore
-            dispatch(loginAction())
+            dispatch(loginAction(data))
+            console.log(data)
         }else{
             return "ERROR"
         }
@@ -19,6 +19,6 @@ export const login = (login: string, password: string) => {
 
 export const logout = (item: any) => {
     return async function (dispatch: AppDispatch, getState: any) {
-
+        
     }
 }

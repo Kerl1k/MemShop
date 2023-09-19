@@ -1,0 +1,36 @@
+.user{
+    height: 700px;
+    width: 100%;
+    margin: 15px
+}
+.user__photo{
+    display: flex;
+    justify-content: center;
+}
+
+.photo{
+    width: 100px;
+    height: 100px;
+    background: black;
+}
+
+.user__block{
+    display: flex;
+    margin: 15px;
+}
+
+.user__left_block{
+    width: 50%;
+    margin: 15px;
+    border: 2px solid pink;
+    height: 250px;
+}
+
+.user__right_block{
+    width: 50%;
+    margin: 15px;
+    border: 2px solid pink;
+    height: 250px;
+}
+
+
