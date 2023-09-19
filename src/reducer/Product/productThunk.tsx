@@ -1,5 +1,5 @@
 import {ICart, IProduct} from "../../typeScript/typescript";
-import {addManyAction, changeAction} from "./productReducer";
+import {addManyAction, changeAction, deleteAction} from "./productReducer";
 
 const url = "http://localhost:3001/product"
 
@@ -16,18 +16,29 @@ export const addManyProduct = (item: any) => {
 }
 
 export const changeProduct = (productList: IProduct[], newProduct: ICart) => {
-    return async function (dispatch: any, getState: any) {
-        return  fetch(url + `?id=${newProduct.id}`, {
-            method: "GET"
+    return async function (dispatch: any, getState: any) { 
+        await fetch(url + `/${newProduct.id}`, {
+            method: "DELETE"
         })
-            .then(user => user.json())
-            .then(user=> console.log(user))
             .catch(err => console.log(err))
-        // const response = await fetch(url, {
-        //     method: "POST",
-        //     headers: {'Content-Type': 'application/json;charset=utf-8'},
-        //     body: JSON.stringify(newProduct)
-        // })
-        // dispatch(changeAction(await response.json()))
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {'Content-Type': 'application/json;charset=utf-8'},
+            body: JSON.stringify(newProduct)
+        })
+        dispatch(changeAction(await response.json()))
+    }
+}
+
+
+export const deleteProduct = (id: ICart) => {
+    return async function (dispatch: any, getState: any) { 
+        await fetch(url + `/${id}`, {
+            method: "DELETE"
+        })
+            .catch(err => console.log(err))
+
+            const newList = await fetch(url)
+        dispatch(deleteAction(await newList.json()))
     }
 }

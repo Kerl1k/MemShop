@@ -1,0 +1,36 @@
+.footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    background: rgb(241, 202, 208);
+    align-items: flex-end;
+}
+
+.block_list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.block {
+    width: 33%;
+    height: 100%;
+    margin: 0px 15px 15px 15px;
+
+}
+
+.block2 {
+    width: 33%;
+    height: 100%;  
+    margin: 0px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+
+.block3_1{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0px;
+}

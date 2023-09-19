@@ -24,6 +24,7 @@
     width: 150px;
     border: 2px solid pink;
     background: #fde5ea;
+    margin: 15px;
 }
 .login_password:hover{
     cursor: pointer;

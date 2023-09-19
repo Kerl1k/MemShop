@@ -16,14 +16,14 @@ export const addUsers = ( item: any) => {
             })
             .then(user => user.json())
             .then(user=> userName=user)
-        if (userName.length === 0){
+        if (userName.length !== 1){
+            alert("XUI")
+        }else{
             const response = await fetch(url,
                 {method: "POST",
                     headers: {'Content-Type': 'application/json;charset=utf-8'},
                     body: JSON.stringify(item)})
             dispatch(addUsersAction(await response.json()))
-        }else{
-            alert("XUI")
         }
     }
 }
