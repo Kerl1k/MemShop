@@ -4,6 +4,7 @@ export interface IProduct {
     img:string;
     price:number;
     about: string;
+    type: string[];
 }
 
 

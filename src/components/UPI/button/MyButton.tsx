@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../UPI/button/MyButton.module.css';
+import classes from '../button/MyButton.module.css';
 
 const MyButton = ({children, ...props}: any) => {
     return (

@@ -15,12 +15,12 @@ const Cart = () => {
 
         async function q(p: ICart) {
             // @ts-ignore
-            await dispatch(deleteCart(p))
+            dispatch(deleteCart(p))
         }
 
         async function w(p: ICart) {
             // @ts-ignore
-            await dispatch(addCart(p))
+            dispatch(addCart(p))
         }
 
         return (

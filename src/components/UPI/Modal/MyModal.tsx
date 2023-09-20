@@ -1,5 +1,5 @@
 import React from 'react';
-import  '../CSS/MyModal.css'
+import  '../Modal/MyModal.css'
 
 
 const MyModal = ({children, visible, setVisible}: any) => {
