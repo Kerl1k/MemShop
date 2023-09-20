@@ -15,7 +15,7 @@ export const addManyProduct = (item: any) => {
     }
 }
 
-export const changeProduct = (productList: IProduct[], newProduct: ICart) => {
+export const changeProduct = (newProduct: ICart) => {
     return async function (dispatch: any, getState: any) { 
         await fetch(url + `/${newProduct.id}`, {
             method: "DELETE"

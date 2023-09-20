@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {ICart} from "../typeScript/typescript";
 import {useTypedSelector} from "../hook/useTypedSelector";
 import {addCart} from "../reducer/Cart/cartThunk";
-import MyModal from "./MyModal";
+import MyModal from "./UPI/Modal/MyModal";
 import MyForm from "./ChangeProduct";
 import {useTypedDispatch} from "../hook/useTypedDispatch";
 
