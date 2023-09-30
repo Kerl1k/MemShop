@@ -10,7 +10,7 @@ export const ProductReducer =( (state: ProductState = defaultState, action: {typ
         case "ADD_MANY_PRODUCT":
             return {...action.payload}
         case "ADD_PRODUCT":
-            return {...action.payload}
+            return {...state, [action.payload.id]: {...action.payload}}
         case "CHANGE_PRODUCT":
             return {...state, [action.payload.id]:{...action.payload}};
         case "GET_PRODUCT":
@@ -21,5 +21,6 @@ export const ProductReducer =( (state: ProductState = defaultState, action: {typ
 })
 
 export const addManyAction = (payload: any) => ({type: "ADD_MANY_PRODUCT", payload})
+export const addProductAction = (payload: any) => ({type: "ADD_PRODUCT", payload})
 export const changeAction = (payload: any) => ({type: "CHANGE_PRODUCT", payload})
 export const deleteAction = (payload: any) => ({type: "GET_PRODUCT", payload})

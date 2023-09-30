@@ -12,9 +12,15 @@ export interface ICart extends IProduct{
     count: number;
 }
 
-export interface IUsers{
+
+
+export interface IUsers {
     id: number;
     login: string;
     password: string;
     type: string;
+}
+
+export interface ILogin extends IUsers {
+    isLoggedIn: boolean;
 }

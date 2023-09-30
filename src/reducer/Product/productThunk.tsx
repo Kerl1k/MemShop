@@ -1,5 +1,5 @@
 import {ICart, IProduct} from "../../typeScript/typescript";
-import {addManyAction, changeAction, deleteAction} from "./productReducer";
+import {addManyAction, addProductAction, changeAction, deleteAction} from "./productReducer";
 
 const url = "http://localhost:3001/product"
 
@@ -14,6 +14,18 @@ export const addManyProduct = (item: any) => {
         dispatch(addManyAction(newProduct))
     }
 }
+
+export const addProduct = (newProduct: ICart) => {
+    return async function (dispatch: any, getState: any) { 
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {'Content-Type': 'application/json;charset=utf-8'},
+            body: JSON.stringify(newProduct)
+        })
+        dispatch(addProductAction(await response.json()))
+    }
+}
+
 
 export const changeProduct = (newProduct: ICart) => {
     return async function (dispatch: any, getState: any) { 

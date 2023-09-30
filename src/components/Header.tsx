@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from "react-router-dom";
 import '../CSS/Header.css'
 import { useTypedSelector } from "../hook/useTypedSelector";
@@ -8,8 +7,8 @@ import { useTypedDispatch } from "../hook/useTypedDispatch";
 import { logoutAction } from '../reducer/login/loginReducer';
 
 const Header = () => {
+    const users = useTypedSelector(state => state.login)
     const cart = useTypedSelector(state => Object.values(state.cart))
-    const login = useTypedSelector(state => state.login.isLoggedIn)
     const dispatch = useTypedDispatch()
     let sum = 0
     cart.forEach((p) => {
@@ -19,14 +18,13 @@ const Header = () => {
         dispatch(logoutAction())
     }
 
-
     return (
         <header className="header_button_list">
             <div className="header">
-                <img className='headers__photo' src={pepe} />
+            <Link className="headers__photo" to="/"><img className='headers__photo' src={pepe} /></Link>
                 <Link className="header_button" to="/">На главную</Link>
                 {
-                    login ?
+                    users.isLoggedIn ?
                         <>
                         <Link className="header_button" to="/Cart">Корзина: {sum}</Link>
                             <div className="dropdown">
