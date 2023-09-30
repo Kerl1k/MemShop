@@ -1,43 +1,11 @@
 {
   "product": [
     {
-      "id": 1,
-      "name": "муренок",
-      "img": "https://chpic.su/_data/stickers/k/kisanopisaa/kisanopisaa_049.webp",
-      "price": "1231",
-      "about": "banana mmm monks",
-      "type": "Мемы с котенком"
-    },
-    {
       "id": 3,
       "name": "Жаба",
       "img": "https://sun9-21.userapi.com/impg/xMZU1KUGd_jYNueY_4z1DV3oESUgOHrI7ulg1w/i36PSU9FVxs.jpg?size=1996x2003&quality=95&sign=f2e37b69dd89c9eeab26744b75e11a65&type=album",
       "price": 42,
       "about": "money",
-      "type": "Базовые мемы"
-    },
-    {
-      "id": 4,
-      "name": "стул",
-      "img": "https://sun9-62.userapi.com/impg/k8Y9wIjPfu9dDLTh-ExWO3VWFI7z6rlIIeIruA/-OiIneqRfmI.jpg?size=600x600&quality=96&sign=10f44ed62f6e9da726784098e02a3ad5&type=album",
-      "price": "30",
-      "about": "exotic fruit special for Nixi",
-      "type": "18+"
-    },
-    {
-      "id": 6,
-      "name": "sad frog!",
-      "img": "https://i1.sndcdn.com/artworks-000329925816-3yu1fd-t500x500.jpg",
-      "price": "233333",
-      "about": "very sad fross",
-      "type": "Базовые мемы"
-    },
-    {
-      "id": 5,
-      "name": "Кладмен мудак",
-      "img": "https://sun9-12.userapi.com/impg/rB5QcjscNUPr3pf9DlhWIJ2ggbqiqmvE1JdzIQ/vpAGxgtwZ_0.jpg?size=747x511&quality=95&sign=725fde1a0d33ac42ae4f53e9304dba57&type=album",
-      "price": 10000,
-      "about": "dolbit norm",
       "type": "Базовые мемы"
     },
     {
@@ -56,94 +24,122 @@
       "about": "Новый меме 2023",
       "type": "Мемы с котенком"
     },
-    [
-      {
-        "id": 1,
-        "name": "муренок",
-        "img": "https://chpic.su/_data/stickers/k/kisanopisaa/kisanopisaa_049.webp",
-        "price": "1231",
-        "about": "banana mmm monks",
-        "type": "Мемы с котенком"
-      },
-      {
-        "id": 3,
-        "name": "Жаба",
-        "img": "https://sun9-21.userapi.com/impg/xMZU1KUGd_jYNueY_4z1DV3oESUgOHrI7ulg1w/i36PSU9FVxs.jpg?size=1996x2003&quality=95&sign=f2e37b69dd89c9eeab26744b75e11a65&type=album",
-        "price": 42,
-        "about": "money",
-        "type": "Базовые мемы"
-      },
-      {
-        "id": 4,
-        "name": "стул",
-        "img": "https://sun9-62.userapi.com/impg/k8Y9wIjPfu9dDLTh-ExWO3VWFI7z6rlIIeIruA/-OiIneqRfmI.jpg?size=600x600&quality=96&sign=10f44ed62f6e9da726784098e02a3ad5&type=album",
-        "price": "30",
-        "about": "exotic fruit special for Nixi",
-        "type": "18+"
-      },
-      {
-        "id": 5,
-        "name": "Кладмен мудак",
-        "img": "https://sun9-12.userapi.com/impg/rB5QcjscNUPr3pf9DlhWIJ2ggbqiqmvE1JdzIQ/vpAGxgtwZ_0.jpg?size=747x511&quality=95&sign=725fde1a0d33ac42ae4f53e9304dba57&type=album",
-        "price": 10000,
-        "about": "dolbit norm",
-        "type": "Базовые мемы"
-      },
-      {
-        "id": 6,
-        "name": "sad frog!",
-        "img": "https://i1.sndcdn.com/artworks-000329925816-3yu1fd-t500x500.jpg",
-        "price": "233333",
-        "about": "very sad fross",
-        "type": "Базовые мемы"
-      },
-      {
-        "id": 7,
-        "name": "Мудрый дуб",
-        "img": "https://memepedia.ru/wp-content/uploads/2022/10/mudroe-tainstvennoe-derevo-mem-25.jpg",
-        "price": "500",
-        "about": "Говорит томным голосомм",
-        "type": "Новые мемы"
-      },
-      {
-        "id": 8,
-        "name": "Не каждый поймет",
-        "img": "https://texterra.ru/upload/iblock/fa9/3po285zs3v542j0hvi2jxh1m4z4ggk2q/soc_seti.webp",
-        "price": "19",
-        "about": "Новый меме 2023",
-        "type": "Мемы с котенком"
-      }
-    ]
-  ],
-  "cart": {
-    "3": {
-      "id": 3,
-      "name": "Жаба",
-      "img": "https://sun9-21.userapi.com/impg/xMZU1KUGd_jYNueY_4z1DV3oESUgOHrI7ulg1w/i36PSU9FVxs.jpg?size=1996x2003&quality=95&sign=f2e37b69dd89c9eeab26744b75e11a65&type=album",
-      "price": 42,
-      "about": "money",
-      "type": "meme_cat",
-      "count": 1
+    {
+      "name": "фронт",
+      "img": "https://devby.io/storage/images/10/08/79/76/derived/f7d4db81fdbc633e0f4b929b37408938.jpg",
+      "price": "50",
+      "id": 9
     },
-    "7": {
-      "id": 7,
-      "name": "Мудрый дуб",
-      "img": "https://memepedia.ru/wp-content/uploads/2022/10/mudroe-tainstvennoe-derevo-mem-25.jpg",
-      "price": "500",
-      "about": "Говорит томным голосом",
-      "type": "meme_tree",
-      "count": 1
+    {
+      "name": "будни",
+      "img": "https://sun1-13.userapi.com/impg/Bbe2N-xrZ-Bb5ogG51L-MJbRtziHj23jCNpHCQ/TYxs0X_zJG8.jpg?size=1087x1080&quality=96&sign=4b58716bc3d6189912e29b2d13f8ae70&type=album",
+      "about": "",
+      "price": "100",
+      "type": "",
+      "id": 12
     },
-    "8": {
-      "name": "Не каждый поймет",
-      "img": "https://texterra.ru/upload/iblock/fa9/3po285zs3v542j0hvi2jxh1m4z4ggk2q/soc_seti.webp",
-      "price": "1",
-      "about": "ЙЦУЦЙУ",
-      "type": "meme_18",
-      "id": 8,
-      "count": 1
+    {
+      "id": 6,
+      "name": "sad frog!",
+      "img": "https://i1.sndcdn.com/artworks-000329925816-3yu1fd-t500x500.jpg",
+      "price": "2000",
+      "about": "very sad fross",
+      "type": "Базовые мемы"
+    },
+    {
+      "id": 1,
+      "name": "murmur",
+      "img": "https://chpic.su/_data/stickers/k/kisanopisaa/kisanopisaa_049.webp",
+      "price": "1231",
+      "about": "banana mmm monks",
+      "type": "Мемы с котенком"
     }
-  },
+  ],
+  "cart": [
+    {
+      "id": 1694470985310,
+      "value": {
+        "3": {
+          "id": 3,
+          "name": "Жаба",
+          "img": "https://sun9-21.userapi.com/impg/xMZU1KUGd_jYNueY_4z1DV3oESUgOHrI7ulg1w/i36PSU9FVxs.jpg?size=1996x2003&quality=95&sign=f2e37b69dd89c9eeab26744b75e11a65&type=album",
+          "price": 42,
+          "about": "money",
+          "type": "Базовые мемы",
+          "count": 1
+        },
+        "6": {
+          "id": 6,
+          "name": "sad frog!",
+          "img": "https://i1.sndcdn.com/artworks-000329925816-3yu1fd-t500x500.jpg",
+          "price": "2000",
+          "about": "very sad fross",
+          "type": "Базовые мемы",
+          "count": 2
+        },
+        "7": {
+          "id": 7,
+          "name": "Мудрый дуб",
+          "img": "https://memepedia.ru/wp-content/uploads/2022/10/mudroe-tainstvennoe-derevo-mem-25.jpg",
+          "price": "500",
+          "about": "Говорит томным голосомм",
+          "type": "Новые мемы",
+          "count": 2
+        },
+        "8": {
+          "id": 8,
+          "name": "Не каждый поймет",
+          "img": "https://texterra.ru/upload/iblock/fa9/3po285zs3v542j0hvi2jxh1m4z4ggk2q/soc_seti.webp",
+          "price": "19",
+          "about": "Новый меме 2023",
+          "type": "Мемы с котенком",
+          "count": 2
+        },
+        "9": {
+          "name": "фронт",
+          "img": "https://devby.io/storage/images/10/08/79/76/derived/f7d4db81fdbc633e0f4b929b37408938.jpg",
+          "price": "50",
+          "id": 9,
+          "count": 1
+        },
+        "12": {
+          "name": "будни",
+          "img": "https://sun1-13.userapi.com/impg/Bbe2N-xrZ-Bb5ogG51L-MJbRtziHj23jCNpHCQ/TYxs0X_zJG8.jpg?size=1087x1080&quality=96&sign=4b58716bc3d6189912e29b2d13f8ae70&type=album",
+          "about": "",
+          "price": "100",
+          "type": "",
+          "id": 12,
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": 1695824235496,
+      "value": {
+        "7": {
+          "id": 7,
+          "name": "Мудрый дуб",
+          "img": "https://memepedia.ru/wp-content/uploads/2022/10/mudroe-tainstvennoe-derevo-mem-25.jpg",
+          "price": "500",
+          "about": "Говорит томным голосомм",
+          "type": "Новые мемы",
+          "count": 1
+        },
+        "8": {
+          "id": 8,
+          "name": "Не каждый поймет",
+          "img": "https://texterra.ru/upload/iblock/fa9/3po285zs3v542j0hvi2jxh1m4z4ggk2q/soc_seti.webp",
+          "price": "19",
+          "about": "Новый меме 2023",
+          "type": "Мемы с котенком",
+          "count": 1
+        }
+      }
+    },
+    {
+      "id": 1695824235497
+    }
+  ],
   "users": [
     {
       "id": 1694470985310,
@@ -154,21 +150,13 @@
       "date": "20002-08-22"
     },
     {
-      "id": 1694526709803,
+      "id": 1695824235496,
       "login": "user",
       "password": "user",
-      "type": "user"
-    },
-    {
-      "id": 1695137505630,
-      "login": "123",
-      "password": "3",
       "type": "user",
-      "email": "Kirl",
-      "date": "20002-08-22"
+      "email": "user",
+      "date": "2002-08-22"
     }
   ],
-  "type_meme":[
-    
-  ]
+  "type_meme": []
 }

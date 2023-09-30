@@ -1,12 +1,14 @@
 import {RootState} from "../index";
-import {addManyCart} from "./cartThunk";
-
+import { addManyCartAction } from "./cartReducer";
 export const fetchCart:any = () => {
     return function (dispatch:any, getState:()=> RootState) {
-        fetch("http://localhost:3001/cart")
+        const user:any = getState().login
+        if(user.isLoggedIn === true){
+            fetch("http://localhost:3001/cart"+`?id=${user[0].id}`, {method: "GET", headers: {'Content-Type': 'application/json;charset=utf-8'}})
             .then(response => response.json())
-            .then(product => Object.values(product))
-            .then(json => dispatch(addManyCart(json)))
+            .then(cart => cart[0])
+            .then(json => dispatch(addManyCartAction(json.value)))
             .catch(err => console.log(err))
+        }
     }
 }

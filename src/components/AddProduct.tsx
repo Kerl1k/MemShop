@@ -1,39 +1,30 @@
-import React from 'react';
 import { useTypedDispatch } from "../hook/useTypedDispatch";
-import { changeProduct, deleteProduct } from "../reducer/Product/productThunk";
-import { useTypedSelector } from "../hook/useTypedSelector";
+import { addProduct } from "../reducer/Product/productThunk";
 import '../CSS/MyForm.css'
 import MyButton from '../components/UPI/button/MyButton'
+import { useState } from "react";
 
-const MyForm = ({ product, setVisible }: any) => {
+const MyForm = ({setVisible }: any) => {
     const dispatch = useTypedDispatch()
-    const productList = useTypedSelector(state => Object.values(state.info))
-    let newProduct = {
-        name: product.name,
-        img: product.img,
-        price: product.price,
-        about: product.about,
-        type: product.type
-    }
+    const [newProduct, setNewProduct] = useState({name: '', img: '', about: '', price: '', type: ''})
     async function change() {
         setVisible(false)
         // @ts-ignore
-        dispatch(changeProduct(productList, newProduct))
+        dispatch(addProduct(newProduct))
     }
 
     return (
         <div className="form">
             <h1>Добавление продукта</h1>
-            <p />Имя:<input className='form__input' onChange={event => newProduct.name = event.target.value} type={"text"} />
-            <p />Ссылка на фото:<input className='form__input' onChange={event => newProduct.img = event.target.value} type={"text"} />
-            <p />Цена:<input className='form__input' onChange={event => newProduct.price = event.target.value} type={"text"} />
-            <p />Описание товара:<input className='form__input' onChange={event => newProduct.about = event.target.value} type={"text"} />
+            <p />Имя:<input className='form__input' onChange={e => setNewProduct({...newProduct, name: e.target.value})} type={"text"} />
+            <p />Ссылка на фото:<input className='form__input' onChange={e => setNewProduct({...newProduct, img: e.target.value})} type={"text"} />
+            <p />Цена:<input className='form__input' onChange={e => setNewProduct({...newProduct, price: e.target.value})} type={"text"} />
+            <p />Описание товара:<input className='form__input' onChange={e => setNewProduct({...newProduct, about: e.target.value})} type={"text"} />
             <p />Тип товара:
-            <select className='form__input' onChange={event => newProduct.type = event.target.value}>
-                <option value={"Новые мемы"}>Новые мемы</option>
-                <option value={"Базовые мемы"}>Базовые мемы</option>
-                <option value={"Мемы с котенком"}>Мемы с котенком</option>
-                <option value={"18+"}>18+</option>
+            <select className='form__input' onChange={e => setNewProduct({...newProduct, type: e.target.value})}>
+                <option value={"Новые картинки"}>Новые мемы</option>
+                <option value={"Картинки на все случаи жизни"}>Базовые мемы</option>
+                <option value={"Картинки с котенком"}>Мемы с котенком</option>
             </select>
             <div className='form__buttons'>
                 <MyButton onClick={change}>Добавить продукт</MyButton>

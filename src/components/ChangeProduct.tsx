@@ -35,10 +35,9 @@ const MyForm = ({ product, setVisible }: any) => {
             <p />Описание товара:<input className='form__input' onChange={event => newProduct.about = event.target.value} defaultValue={product.about} type={"text"}/>
             <p />Тип товара:
             <select className='form__input' onChange={event => newProduct.type = event.target.value} defaultValue={product.type}>
-                <option value={"Новые мемы"}>Новые мемы</option>
-                <option value={"Базовые мемы"}>Базовые мемы</option>
-                <option value={"Мемы с котенком"}>Мемы с котенком</option>
-                <option value={"18+"}>18+</option>
+                <option value={"Новые картинки"}>Новые мемы</option>
+                <option value={"Картинки на все случаи жизни"}>Базовые мемы</option>
+                <option value={"Картинки с котенком"}>Мемы с котенком</option>
             </select>
             <div className='form__buttons'>
                 <MyButton onClick={change}>Сохранить изменения</MyButton>

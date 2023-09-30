@@ -1,10 +1,12 @@
 import React from 'react';
 import MySelect from "./UPI/MySelect/MySelect"
+import '../CSS/PostFilter.css'
 
 const PostFilter = ({filter, setFilter}:any) => {
     return (
-        <div>
+        <div className='filter'>
             <input
+                className='input'
                 value={filter.query}
                 onChange={e => setFilter({...filter, query: e.target.value})}
                 placeholder="Поиск..."
